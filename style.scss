@@ -1,9 +1,13 @@
-$color1: helvetica;
-$color2: verdana;
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
 
-@media only screen and (max-width: 480px){
-  /* phone screen*/
-}
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
 
 /* basic elements */
 html {
@@ -12,12 +16,45 @@ html {
 	}
 	
 body { 
-	font: 75% $color1, sans-serif;
+	height: 100%;
+	font: 75% helvetica, sans-serif;
 	line-height: 1.88889;
-	color: #555753; 
-/*	background: url{https://https://github.com/StrangerLefty/zenProject/blob/master/Stormtrooper%20Hang%20In%20there.jpg);*/
-     background-color: #9cfbff;
+	color: black; 
+	background: url(colorful_fish_underwater.jpg);
+	background-color: #9cfbff;
+	margin: 0; 
+	padding: 0;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	z-index: 5;
 	}
+	
+.page-wrapper {
+	height: 200%;
+    position: relative;
+    width: 60%;
+    padding: 30px;
+	margin: 0 auto auto 20%;
+    text-align: center;
+    box-shadow: 0 0 24px rgba(0,0,0,0.3);
+	background: rgba(255, 241, 156, .7) fixed 50% top;
+	z-index: 6;
+	
+	/*display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap:20px;
+	grid-template-areas:
+	//grid layout each word and dot counts as a colum/row
+		". . . . . .      . ."
+		". . intro intro intro intro . ."
+		". . supporting supporting supporting supporting . ."
+		". . sidebar    sidebar    sidebar    sidebar    . ."
+		". . footer     footer      footer     footer    . ."*/
+	}
+
 	
 p { 
 	margin-top: 0; 
@@ -25,7 +62,7 @@ p {
 	}
 	
 h3 { 
-	font: italic normal 1.4em $color1, sans-serif;
+	font: italic normal 1.4em helvetica, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
 	color: #7D775C;
@@ -34,7 +71,7 @@ h3 {
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #B7A5DF;
+	color: white;
 	}
 	
 a:visited { 
@@ -47,122 +84,141 @@ a:hover, a:focus, a:active {
 	text-decoration: underline; 
 	color: #9685BA;
 	}
+	
 abbr {
 	border-bottom: none;
 	}
 
 
 /* specific divs */
-.page-wrapper { 
-	/*background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; */
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
 
 .intro { 
-	min-width: 470px;
+//	min-width: 470px;
 	width: 100%;
+	
 	}
 
 header h1 { 
-	/*background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;*/
-	margin-top: 10px;
+	background: transparent  no-repeat top left;
+	font-size: 3em;
+	color: #402500;
+	margin-top: -20px;
 	display: block;
-	width: 219px;
-	height: 87px;
+	/*width: 50%;
+	height: 87px;*/
+	text-align: center;
 	float: left;
-
-	text-indent: 100%;
+/*	text-indent: 100%;*/
 	white-space: nowrap;
 	overflow: hidden;
 	}
+	
 header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
+	background: transparent url() no-repeat top left; 
+	color:white;
+	margin-top: -10px; 
+	/*margin-bottom: 40px; */
+/*	width: 50%; */
+	height: 2em; 
 	float: right;
-
-	text-indent: 100%;
+/*	text-indent: 75%;
 	white-space: nowrap;
-	overflow: hidden;
+	overflow: hidden;*/
 	}
+	
 header {
 	padding-top: 20px;
-	height: 87px;
+	height: 90px;
 }
 
 .summary {
 	clear: both; 
-	margin: 20px 20px 20px 10px; 
+	/*margin: 20px 20px 20px 10px; 
 	width: 160px; 
-	float: left;
+	float: left;*/
+
 	}
-.summary p {
-	font: italic 1.1em/2.2 $color1; 
+	
+.summary p{
+	font: italic 1.1em/2.2 helvetica; 
 	text-align: center;
+
 	}
 
 .preamble {
 	clear: right; 
 	padding: 0px 10px 0 10px;
+
 	}
+	
 .supporting {	
 	padding-left: 10px; 
 	margin-bottom: 40px;
+
 	}
 
 footer { 
 	text-align: center; 
+	margin: 10px -25px 0px -25px;
+	background-color: darkblue;
+//  position: absolute;
 	}
+	
 footer a:link, footer a:visited { 
 	margin-right: 20px; 
 	}
+	
 
-.sidebar {
+/*.sidebar {
 	margin-left: 600px; 
 	position: absolute; 
 	top: 0; 
 	right: 0;
-	}
+	}*/
+	
 .sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
+	font: 1.1em verdana, sans-serif; 
+	background: transparent url() top left repeat-y; 
 	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
+/*	margin-top: 150px; */
+	width: 100%; 
+
 	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
+	
+.sidebar h3 .select { 
+	background: transparent url() no-repeat top left;
+	color: orange;
 	margin: 10px 0 5px 0; 
-	width: 97px; 
+	width: 100%; 
 	height: 16px; 
-
-	text-indent: 100%;
+/*	text-indent: 100%;
 	white-space: nowrap;
-	overflow: hidden;
+	overflow: hidden;*/
+
 	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
+	
+.sidebar h3 .archives { 
+	background: transparent url() no-repeat top left;  
+	color: orange;
 	margin: 25px 0 5px 0; 
-	width:57px; 
+	width:100%; 
 	height: 14px; 
-
-	text-indent: 100%;
+/*	text-indent: 100%;
 	white-space: nowrap;
-	overflow: hidden;
+	overflow: hidden;*/
+
 	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
+	
+.sidebar h3 .resources { 
+	background: transparent url() no-repeat top left; 
+	color: orange;
 	margin: 25px 0 5px 0; 
-	width:63px; 
+	width:100%; 
 	height: 10px; 
-
-	text-indent: 100%;
+/*	text-indent: 100%;
 	white-space: nowrap;
-	overflow: hidden;
+	overflow: hidden;*/
+
 	}
 
 
@@ -170,27 +226,50 @@ footer a:link, footer a:visited {
 	margin: 0;
 	padding: 0;
 	}
+	
 .sidebar li {
 	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
+	background: transparent url() no-repeat top center;  
 	display: block; 
 	padding-top: 5px; 
 	margin-bottom: 5px;
 	list-style-type: none;
 	}
+	
 .sidebar li a:link {
 	color: #988F5E;
 	}
+	
 .sidebar li a:visited {
 	color: #B3AE94;
 	}
 
 
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
+/*.extra1 {
+	background: transparent url() top left no-repeat; 
 	position: absolute; 
 	top: 40px; 
 	right: 0; 
 	width: 148px; 
 	height: 110px;
+	}*/
+	
+@media screen and (max-width: 480px){
+.page-wrapper { 
+	background: url () no-repeat top left; 
+	padding: 0 15px 0 15px;  
+	//margin: 0; 
+	position: relative;
 	}
+
+}
+
+@media screen and (min-width:481px){
+.page-wrapper { 
+	background: url () no-repeat top left; 
+//	padding: 0 15px 0 15px;  
+	margin: 0 30% 0 30%; 
+	position: relative;
+	}
+
+}
