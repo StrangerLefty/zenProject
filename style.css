@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url("webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("webfont.eot?#iefix") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("webfont.woff") format("woff"), url("webfont.ttf") format("truetype"), url("webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
 @media only screen and (max-width: 480px) {
   /* phone screen*/ }
 /* basic elements */
@@ -5,7 +11,14 @@ body {
   height: 100%;
   font: 75% helvetica, sans-serif;
   line-height: 1.5;
-  color: black;
+  background: rgba(10, 10, 10, 0.44);
+  background: -moz-linear-gradient(top, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(10, 10, 10, 0.44)), color-stop(31%, rgba(58, 58, 59, 0.65)), color-stop(64%, rgba(145, 145, 145, 0.84)), color-stop(65%, rgba(148, 148, 148, 0.85)), color-stop(100%, #f9fbfc));
+  background: -webkit-linear-gradient(top, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
+  background: -o-linear-gradient(top, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
+  background: -ms-linear-gradient(top, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#f9fbfc', GradientType=0 );
   background-image: url("colorful_fish_underwater.jpg"); }
 
 body, .page-wrapper {
@@ -50,7 +63,7 @@ abbr {
 /* specific divs with grid */
 .page-wrapper {
   position: relative;
-  max-width: 560px;
+  max-width: 50vw;
   padding: 30px 0 0;
   text-align: center;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
@@ -63,15 +76,15 @@ abbr {
   background: linear-gradient(to bottom, rgba(133, 247, 255, 0.5) 0%, rgba(168, 220, 255, 0.5) 0%, rgba(71, 212, 255, 0.5) 26%, rgba(87, 134, 255, 0.5) 63%, rgba(92, 100, 255, 0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85f7ff', endColorstr='#5c64ff', GradientType=0 );
   z-index: 6;
-  margin: 0 auto auto 20%;
+  margin: auto auto auto auto;
   display: grid;
   /*height: 10px;*/
   height: 100%;
   width: 100%;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(3, 200vh);
+  grid-template-columns: fit 60%;
+  grid-template-rows: fit(40%);
   grid-gap: 20px;
-  grid-template-areas: ". intro intro intro intro intro intro ." ". supporting supporting supporting supporting supporting supporting ." ". sidebar sidebar    sidebar    sidebar    sidebar    sidebar ." ". . .          .          .          .          . ."; }
+  grid-template-areas: ". intro 			intro 			intro 			intro 			intro 			intro 			." ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	." ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		." ". footer 		footer   		footer    	footer    	footer   		footer 			."; }
 
 .intro {
   grid-area: intro; }
@@ -96,6 +109,9 @@ header h2 {
 footer {
   margin-bottom: -55vh;
   margin-top: 55vh;
+  margin-left: -72px;
+  margin-right: -73px;
+  background-color: blue;
   all: revert; }
 
 footer a:link, footer a:visited {
