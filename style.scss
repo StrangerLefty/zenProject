@@ -1,7 +1,11 @@
-$font1: helvetica, serif;
-$font2: verdana, sans-serif;
-$font3: 'LUCIDA CALLIGRAPHY', sans-serif;
-$paragraph-size: 1.5em;
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Satisfy');
+$font1: 'Amatic SC', sans-serif;
+$font3: 'Satisfy', cursive;
+$paragraph-size: 2em;
+$salmon-color: #d4737e;
+$blue-color: #0d5ba6;
+$bigger-h3: 3em;
+
 
 
 @font-face {
@@ -14,28 +18,79 @@ $paragraph-size: 1.5em;
        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 
 		 }
-		 
-  /* phone screen*/
-@media only screen and (max-width: 535px){
-	.page-wrapper{
-		max-width: 80vw;
-		}
-	}
-	
-/*tablet screen*/
-@media only screen and (min-width: 536px)and (max-width: 719px){
-	.page-wrapper{
-		max-width: 65vw;
-		}
-	}
 
-/* All other screens */
-@media only screen and (min-width: 720px){
-	.page-wrapper{
-		max-width: 50vw;
-		}
-	}
+ @keyframes movebubble {
+         from {top: 2000px;}
+         to {top: -5px;}
+     }
 
+ @-webkit-keyframes sideWays {
+         0% {
+             margin-left:-2px;
+         }
+         100% {
+             margin-left:280px;
+         }
+     }
+
+     /*annimation*/
+     .extra2 {
+       -webkit-animation: movebubble 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+       -moz-animation: movebubble 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+       animation: movebubble 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+       left: 5%;
+       top: 90%;
+       -webkit-transform: translate3d(-5%, -5%, 0) scale(1.6) rotate(0.001deg);
+       -moz-transform: translate3d(-5%, -5%, 0) scale(1.6) rotate(0.001deg);
+       transform: translate3d(-5%, -5%, 0) scale(1.6) rotate(0.001deg); }
+
+     .extra3 {
+       -webkit-animation: movebubbles 15s linear infinite, sideWays 20s ease-in-out infinite alternate;
+       -moz-animation: movebubbles 15s linear infinite, sideWays 20s ease-in-out infinite alternate;
+       animation: movebubbles 15s linear infinite, sideWays 20s ease-in-out infinite alternate;
+       left: 70%;
+       top: 96%;
+       -webkit-transform: translate3d(-5%, -5%, 0) scale(2.3) rotate(0.001deg);
+       -moz-transform: translate3d(-5%, -5%, 0) scale(2.3) rotate(0.001deg);
+       transform: translate3d(-5%, -5%, 0) scale(2.3) rotate(0.001deg); }
+
+     .extra4 {
+       -webkit-animation: movebubble 6s linear infinite, sideWays 10s ease-in-out infinite alternate;
+       -moz-animation: movebubble 6s linear infinite, sideWays 10s ease-in-out infinite alternate;
+       animation: movebubble 6s linear infinite, sideWays 10s ease-in-out infinite alternate;
+       left: 40%;
+       top: 40%;
+       -webkit-transform: translate3d(-5%, -5%, 0) scale(0.7) rotate(0.001deg);
+       -moz-transform: translate3d(-5%, -5%, 0) scale(0.7) rotate(0.001deg);
+       transform: translate3d(-5%, -5%, 0) scale(0.7) rotate(0.001deg); }
+
+     .extra5 {
+       -webkit-animation: movebubble 10s linear infinite, sideWays 8s ease-in-out infinite alternate;
+       -moz-animation: movebubble 10s linear infinite, sideWays 8s ease-in-out infinite alternate;
+       animation: movebubble 10s linear infinite, sideWays 8s ease-in-out infinite alternate;
+       left: 75%;
+       top: 20;
+       -webkit-transform: translate3d(-5%, -5%, 0) scale(0.9) rotate(0.001deg);
+       -moz-transform: translate3d(-5%, -5%, 0) scale(0.9) rotate(0.001deg);
+       transform: translate3d(-5%, -5%, 0) scale(0.9) rotate(0.001deg); }
+
+     /* Bubbles */
+     .extra2, .extra3, .extra4, .extra5  {
+       -webkit-border-radius: 50%;
+     	-moz-border-radius: 50%;
+     	border-radius: 50%;
+
+         -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+     	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+     	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+
+         height: 100px;
+     	position:absolute;
+     	width: 100px;
+      animation: movebubble 15s infinate  ease-in-out;
+       -webkit-animation: movebubble 15s infinate  ease-in-out;
+       -o-animation: movebubble 15s infinate ease-in-out;
+         -moz-animation: movebubble 15s infinate ease-in-out; }
 
 /* basic elements */
 html {
@@ -44,7 +99,7 @@ html {
 
 body {
 	height: 100%;
-	font: 75% $font1, sans-serif;
+	font: 75% $font1;
 	line-height: 1.5;
 	background: rgba(10,10,10,0.44);
 		background: -moz-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
@@ -69,7 +124,7 @@ body, .page-wrapper{
 p {
 	margin-top: 0;
 	text-align: left;
-	font-family: $font2;
+	font-family: $font1;
 	font-weight: bold;
 	font-size: $paragraph-size;
 	}
@@ -80,19 +135,20 @@ header h1 {
 	font-weight: bold;
 	text-align: center;
 	font-size: 4em;
-	color: #600319;
+	color: $salmon-color;
 	}
-	
+
 header h2 {
 	//background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
-	font-family: $font2;
+	font-family: $font1;
 	font-size: 2.5em;
 	color: #fff;
 	}
-	
+
 h3 {
-	font: italic normal 2em $font1;
-	font-weight: bold;
+	font-family: $font1;
+  font-size: $bigger-h3;
+	font-weight: normal;
 	letter-spacing: 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -100,23 +156,23 @@ h3 {
 	}
 
 .preamble>h3{
-	color: #600319;
+	color: $blue-color;
 	}
 
 .explanation>h3{
-	color: #73041e;
+	color: $blue-color;
 	}
-	
+
 .participation>h3{
-	color: #8a0424;
+	color: $blue-color;
 	}
 
 .benefits>h3{
-	color: #990528;
+	color: $blue-color;
 	}
 
 .requirements>h3{
-	color: #ad052d;
+	color: $blue-color;
 	}
 
 header {
@@ -139,7 +195,7 @@ a:hover, a:focus, a:active {
 	text-decoration: underline;
 	color: #fffc19;
 	}
-	
+
 abbr {
 	border-bottom: none;
 	}
@@ -152,7 +208,7 @@ abbr {
 	padding: 40px 0 0;
 	text-align: center;
 	box-shadow: 0 0 24px rgba(0,0,0,0.3);
-  
+
      //  background  gradient
 	background: rgba(133,247,255,.8);
 	background: -moz-linear-gradient(top, rgba(133,247,255,.5) 0%, rgba(168,220,255,.5) 0%, rgba(71,212,255,.5) 26%, rgba(87,134,255,.5) 63%, rgba(92,100,255,.5) 100%);
@@ -171,24 +227,19 @@ abbr {
 	width: 100%;
 	grid-template-columns: fit (60%);
 	grid-template-rows: fit(40%);
-	grid-gap:20px;
+	grid-gap:60px;
 	grid-template-areas:
 //grid layout each word and dot counts as a colum/row
 //". . . . . .      . ."
 ". intro 			intro 			intro 			intro 			intro 			intro 			."
 ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	."
 ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		."
-". footer 		footer   		footer    	footer    	footer   		footer 			."
-". . 		.   		.   	.    	.   		.		."
-". . 		.   		.   	.    	.   		.		."
-". . 		.   		.   	.    	.   		.		."
-". . 		.   		.   	.    	.   		.		."
-". . 		.   		.   	.    	.   		.		."
-". . 		.   		.   	.    	.   		.		."
+". .    .       .     .     .       . 	."
+
 	}
 
 .intro {
-grid-area: intro;
+	grid-area: intro;
 
 	}
 
@@ -199,7 +250,7 @@ grid-area: intro;
 
 	}
 .summary p {
-	font: italic $paragraph-size $font1;
+	font: $paragraph-size $font1;
 
 	}
 
@@ -208,7 +259,7 @@ grid-area: intro;
 	}
 
 .supporting  {
-grid-area: supporting;
+	grid-area: supporting;
 	}
 
 .explanation{
@@ -235,12 +286,14 @@ footer {
   margin-top: 75vh;
   margin-left: -21px;
   margin-right: -22px;
-  background-color: blue;
+  background-color: whitesmoke;
+  color:gray;
   all: revert;
 
 }
 
 footer a:link, footer a:visited {
+  text-decoration: none;
 	margin-right: 20px;
 	font-size: 2em;
 	}
@@ -251,13 +304,14 @@ footer a:link, footer a:visited {
 	}
 
 .sidebar .wrapper {
-	font: 10px verdana, sans-serif;
+	font-family: $font1;
 	background: transparent url() top left repeat-y;
 
 	}
-	
+
 .sidebar h3{
-	color: #fff39b;
+  color: #0d5ba6;
+  background-color: whitesmoke;
 	}
 .sidebar h3.select {
 	background: transparent url() no-repeat top left;
@@ -275,20 +329,28 @@ footer a:link, footer a:visited {
 
 .sidebar ul {
 	list-style-type: none;
+  text-align: center;
 	}
 
 .sidebar li {
 	line-height: 1.3em;
 	background: transparent url() no-repeat top center;
 	font-size: 1.4em;
+  text-align: center;
 	}
 
 .sidebar li a:link {
 	color: #fffcf6;
+  text-decoration: none;
 	}
+  .sidebar a:hover{
+    font-size: 1.5em;
+    color:#d4737e;
+  }
 
 .sidebar li a:visited {
-	color: #Bffb532;
+	color: #ffb532;
+  text-decoration: none;
 	}
 
 
@@ -296,3 +358,72 @@ footer a:link, footer a:visited {
 	background: transparent url() top left no-repeat;
 
 	}
+
+  /* phone screen*/
+@media only screen and (max-width: 535px){
+  .page-wrapper{
+    max-width: 80vw;
+    }
+    footer {
+      margin-bottom: -175vh;
+      margin-top: 75vh;
+      color:gray;
+      background-color: whitesmoke;
+      text-decoration: none;
+
+    }
+  }
+
+/*tablet screen*/
+@media only screen and (min-width: 536px)and (max-width: 719px){
+  .page-wrapper{
+    max-width: 65vw;
+    }
+  .extra1{
+  max-width: 17.5vw;
+  float:left;
+  }
+
+  .extra2{
+  max-width: 17.5vw;
+  float: right;
+  }
+  }
+
+/* All other screens */
+@media only screen and (min-width: 720px){
+  .page-wrapper{
+  max-width: 50vw;
+    }
+  .extra1{
+  max-width: 25vw;
+  float:left;
+  }
+
+  .extra2{
+  max-width: 25vw;
+  float: right;
+  }
+  }
+
+  @media only screen and (min-width: 721px)and (max-width: 1440px){
+    footer {
+      margin-bottom: -70vh;
+      margin-top: 75vh;
+      background-color: whitesmoke;
+      color: gray;
+      text-decoration: none;
+
+    }
+  }
+
+  @media only screen and (min-width: 1441px){
+    footer {
+      margin-bottom: -75vh;
+      margin-top: 75vh;
+      background-color: whitesmoke;
+      color: gray;
+      text-decoration: none;
+
+    }
+  }
