@@ -1,10 +1,11 @@
-$font1: helvetica;
-$font2: verdana;
-$paragraph-size: 1.3em;
+$font1: helvetica, serif;
+$font2: verdana, sans-serif;
+$font3: 'LUCIDA CALLIGRAPHY', sans-serif;
+$paragraph-size: 1.5em;
 
 
 @font-face {
-  font-family: 'MyWebFont';
+  font-family: 'mywebfont', script;
   src: url('webfont.eot'); /* IE9 Compat Modes */
   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
@@ -13,11 +14,28 @@ $paragraph-size: 1.3em;
        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 
 		 }
-
-@media only screen and (max-width: 480px){
-
+		 
   /* phone screen*/
-}
+@media only screen and (max-width: 535px){
+	.page-wrapper{
+		max-width: 80vw;
+		}
+	}
+	
+/*tablet screen*/
+@media only screen and (min-width: 536px)and (max-width: 719px){
+	.page-wrapper{
+		max-width: 65vw;
+		}
+	}
+
+/* All other screens */
+@media only screen and (min-width: 720px){
+	.page-wrapper{
+		max-width: 50vw;
+		}
+	}
+
 
 /* basic elements */
 html {
@@ -29,39 +47,81 @@ body {
 	font: 75% $font1, sans-serif;
 	line-height: 1.5;
 	background: rgba(10,10,10,0.44);
-	background: -moz-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(10,10,10,0.44)), color-stop(31%, rgba(58,58,59,0.65)), color-stop(64%, rgba(145,145,145,0.84)), color-stop(65%, rgba(148,148,148,0.85)), color-stop(100%, rgba(249,251,252,1)));
-	background: -webkit-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
-	background: -o-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
-	background: -ms-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
-	background: linear-gradient(to bottom, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#f9fbfc', GradientType=0 );
+		background: -moz-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(10,10,10,0.44)), color-stop(31%, rgba(58,58,59,0.65)), color-stop(64%, rgba(145,145,145,0.84)), color-stop(65%, rgba(148,148,148,0.85)), color-stop(100%, rgba(249,251,252,1)));
+		background: -webkit-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
+		background: -o-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
+		background: -ms-linear-gradient(top, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
+		background: linear-gradient(to bottom, rgba(10,10,10,0.44) 0%, rgba(58,58,59,0.65) 31%, rgba(145,145,145,0.84) 64%, rgba(148,148,148,0.85) 65%, rgba(249,251,252,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#f9fbfc', GradientType=0 );
 	background-image: url('colorful_fish_underwater.jpg');
 	}
 
 body, .page-wrapper{
 	background-image: url('colorful_fish_underwater.jpg');
 	height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: 5;}
 
 p {
 	margin-top: 0;
 	text-align: left;
+	font-family: $font2;
+	font-weight: bold;
 	font-size: $paragraph-size;
 	}
 
+header h1 {
+	/*background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;*/
+	font-family: $font3;
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+	color: #600319;
+	}
+	
+header h2 {
+	//background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
+	font-family: $font2;
+	font-size: 2.5em;
+	color: #fff;
+	}
+	
 h3 {
-	font: italic normal 1.4em $font1, sans-serif;
+	font: italic normal 2em $font1;
 	font-weight: bold;
 	letter-spacing: 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	color: #753947;
+	//color: #20f9f3;
 	}
+
+.preamble>h3{
+	color: #600319;
+	}
+
+.explanation>h3{
+	color: #73041e;
+	}
+	
+.participation>h3{
+	color: #8a0424;
+	}
+
+.benefits>h3{
+	color: #990528;
+	}
+
+.requirements>h3{
+	color: #ad052d;
+	}
+
+header {
+
+}
 
 a:link {
 	font-weight: bold;
@@ -77,8 +137,9 @@ a:visited {
 
 a:hover, a:focus, a:active {
 	text-decoration: underline;
-	color: #9685BA;
+	color: #fffc19;
 	}
+	
 abbr {
 	border-bottom: none;
 	}
@@ -86,13 +147,14 @@ abbr {
 
 /* specific divs with grid */
 .page-wrapper {
-
 	position: relative;
-	max-width: 50vw;
-	padding: 30px 0 0;
+	//max-width: 50vw;
+	padding: 40px 0 0;
 	text-align: center;
-  box-shadow: 0 0 24px rgba(0,0,0,0.3);
-	background: rgba(133,247,255,.5);
+	box-shadow: 0 0 24px rgba(0,0,0,0.3);
+  
+     //  background  gradient
+	background: rgba(133,247,255,.8);
 	background: -moz-linear-gradient(top, rgba(133,247,255,.5) 0%, rgba(168,220,255,.5) 0%, rgba(71,212,255,.5) 26%, rgba(87,134,255,.5) 63%, rgba(92,100,255,.5) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(133,247,255,.5)), color-stop(0%, rgba(168,220,255,.5)), color-stop(26%, rgba(71,212,255,.5)), color-stop(63%, rgba(87,134,255,.5)), color-stop(100%, rgba(92,100,255,.5)));
 	background: -webkit-linear-gradient(top, rgba(133,247,255,.5) 0%, rgba(168,220,255,.5) 0%, rgba(71,212,255,.5) 26%, rgba(87,134,255,.5) 63%, rgba(92,100,255,.5) 100%);
@@ -102,10 +164,10 @@ abbr {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85f7ff', endColorstr='#5c64ff', GradientType=0 );
 
 	z-index: 6;
-	margin: auto auto auto auto;
+	margin: -10px auto auto auto;
 	display: grid;
 	/*height: 10px;*/
-	height: 100%;
+	height: 120%;
 	width: 100%;
 	grid-template-columns: fit (60%);
 	grid-template-rows: fit(40%);
@@ -117,6 +179,12 @@ abbr {
 ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	."
 ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		."
 ". footer 		footer   		footer    	footer    	footer   		footer 			."
+". . 		.   		.   	.    	.   		.		."
+". . 		.   		.   	.    	.   		.		."
+". . 		.   		.   	.    	.   		.		."
+". . 		.   		.   	.    	.   		.		."
+". . 		.   		.   	.    	.   		.		."
+". . 		.   		.   	.    	.   		.		."
 	}
 
 .intro {
@@ -124,22 +192,7 @@ grid-area: intro;
 
 	}
 
-header h1 {
-	/*background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;*/
-	font: Helvetica, serif;
-	text-align: center;
-	font-size: 3em;
-	color: #753947;
-	}
-header h2 {
-	//background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
-	font-size: 2em;
-	color: #fff;
-	}
 
-header {
-
-}
 
 .summary {
 
@@ -178,10 +231,10 @@ grid-area: supporting;
 }
 
 footer {
-  margin-bottom: -55vh;
-  margin-top: 55vh;
-  margin-left: -72px;
-  margin-right: -73px;
+  margin-bottom: -75vh;
+  margin-top: 75vh;
+  margin-left: -21px;
+  margin-right: -22px;
   background-color: blue;
   all: revert;
 
@@ -189,7 +242,7 @@ footer {
 
 footer a:link, footer a:visited {
 	margin-right: 20px;
-
+	font-size: 2em;
 	}
 
 
@@ -201,6 +254,10 @@ footer a:link, footer a:visited {
 	font: 10px verdana, sans-serif;
 	background: transparent url() top left repeat-y;
 
+	}
+	
+.sidebar h3{
+	color: #fff39b;
 	}
 .sidebar h3.select {
 	background: transparent url() no-repeat top left;
@@ -217,21 +274,21 @@ footer a:link, footer a:visited {
 
 
 .sidebar ul {
-
+	list-style-type: none;
 	}
 
 .sidebar li {
 	line-height: 1.3em;
 	background: transparent url() no-repeat top center;
-
+	font-size: 1.4em;
 	}
 
 .sidebar li a:link {
-	color: #988F5E;
+	color: #fffcf6;
 	}
 
 .sidebar li a:visited {
-	color: #B3AE94;
+	color: #Bffb532;
 	}
 
 
