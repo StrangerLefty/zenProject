@@ -27,14 +27,18 @@
   transform: translate3d(-5%, -5%, 0) scale(1.6) rotate(0.001deg); }
 
   .extra3:before{
-  image: url(trollface.jpg);
+  
   margin-top: 30px;
   content:"Clyde loves you";
   font-size: 15px;
   color: red;
   justify-content: center;
 }
+
+
 .extra3 {
+background-image: url(trollface.jpg);
+background-size: 100px 100px;
   -webkit-animation: movebubble 15s linear infinite, sideWays 5s ease-in-out infinite alternate;
   -moz-animation: movebubble 15s linear infinite, sideWays 5s ease-in-out infinite alternate;
   animation: movebubble 15s linear infinite, sideWays 5s ease-in-out infinite alternate;
