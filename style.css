@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Satisfy");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Satisfy");
 @font-face {
   font-family: 'mywebfont', script;
   src: url("webfont.eot");
@@ -15,7 +15,7 @@
     margin-left: -2px; }
   100% {
     margin-left: 280px; } }
-/*annimation*/
+/*animation*/
 .extra2 {
   -webkit-animation: movebubble 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
   -moz-animation: movebubble 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
@@ -75,7 +75,7 @@
 /* basic elements */
 body {
   height: 100%;
-  font: 75% "Amatic SC", sans-serif;
+  font: 75% "Open Sans", sans-serif;
   line-height: 1.5;
   background: rgba(10, 10, 10, 0.44);
   background: -moz-linear-gradient(top, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
@@ -99,7 +99,7 @@ body, .page-wrapper {
 p {
   margin-top: 0;
   text-align: left;
-  font-family: "Amatic SC", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 2em; }
 
@@ -112,12 +112,12 @@ header h1 {
   color: #d4737e; }
 
 header h2 {
-  font-family: "Amatic SC", sans-serif;
+  font-family: "Satisfy", cursive;
   font-size: 2.5em;
   color: #fff; }
 
 h3 {
-  font-family: "Amatic SC", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 3em;
   font-weight: normal;
   letter-spacing: 1px;
@@ -125,19 +125,24 @@ h3 {
   padding-bottom: 10px; }
 
 .preamble > h3 {
-  color: #0d5ba6; }
+  color: #600319;
+  font-weight: bold; }
 
 .explanation > h3 {
-  color: #0d5ba6; }
+  color: #73041e;
+  font-weight: bold; }
 
 .participation > h3 {
-  color: #0d5ba6; }
+  color: #8a0424;
+  font-weight: bold; }
 
 .benefits > h3 {
-  color: #0d5ba6; }
+  color: #990528;
+  font-weight: bold; }
 
 .requirements > h3 {
-  color: #0d5ba6; }
+  color: #ad052d;
+  font-weight: bold; }
 
 a:link {
   font-weight: bold;
@@ -179,13 +184,14 @@ abbr {
   grid-template-columns: fit 60%;
   grid-template-rows: fit(40%);
   grid-gap: 60px;
-  grid-template-areas: ". intro 			intro 			intro 			intro 			intro 			intro 			." ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	." ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		." ". .    .       .     .     .       . 	."; }
+  grid-template-areas: ". intro 			intro 			intro 			intro 			intro 			intro 			." ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	." ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		." ". .    .       .     .     .       . 	." ". footer 		footer   		footer    	footer    	footer   		footer 			."; }
 
 .intro {
   grid-area: intro; }
 
 .summary p {
-  font: 2em "Amatic SC", sans-serif; }
+  font: 2em "Open Sans", sans-serif;
+  font-weight: semi-bold; }
 
 .supporting {
   grid-area: supporting; }
@@ -193,8 +199,8 @@ abbr {
 footer {
   margin-bottom: -75vh;
   margin-top: 75vh;
-  margin-left: -21px;
-  margin-right: -22px;
+  margin-left: -61px;
+  margin-right: -61px;
   background-color: whitesmoke;
   color: gray;
   all: revert; }
@@ -208,11 +214,12 @@ footer a:link, footer a:visited {
   grid-area: sidebar; }
 
 .sidebar .wrapper {
-  font-family: "Amatic SC", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: transparent url() top left repeat-y; }
 
 .sidebar h3 {
-  color: #0d5ba6;
+  color: #fff39b;
+  font-weight: bold;
   background-color: whitesmoke; }
 
 .sidebar h3.select {
@@ -288,14 +295,14 @@ footer a:link, footer a:visited {
   footer {
     margin-bottom: -70vh;
     margin-top: 75vh;
-    background-color: whitesmoke;
+    background-color: blue;
     color: gray;
     text-decoration: none; } }
 @media only screen and (min-width: 1441px) {
   footer {
     margin-bottom: -75vh;
     margin-top: 75vh;
-    background-color: whitesmoke;
+    background-color: blue;
     color: gray;
     text-decoration: none; } }
 

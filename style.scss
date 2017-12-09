@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Satisfy');
-$font1: 'Amatic SC', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Satisfy");
+$font1: 'Open Sans', sans-serif;
 $font3: 'Satisfy', cursive;
 $paragraph-size: 2em;
 $salmon-color: #d4737e;
@@ -33,7 +33,7 @@ $bigger-h3: 3em;
          }
      }
 
-     /*annimation*/
+ /*animation*/
      .extra2 {
        -webkit-animation: movebubble 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
        -moz-animation: movebubble 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
@@ -74,7 +74,7 @@ $bigger-h3: 3em;
        -moz-transform: translate3d(-5%, -5%, 0) scale(0.9) rotate(0.001deg);
        transform: translate3d(-5%, -5%, 0) scale(0.9) rotate(0.001deg); }
 
-     /* Bubbles */
+/* Bubbles */
      .extra2, .extra3, .extra4, .extra5  {
        -webkit-border-radius: 50%;
      	-moz-border-radius: 50%;
@@ -140,14 +140,14 @@ header h1 {
 
 header h2 {
 	//background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
-	font-family: $font1;
+	font-family: $font3;
 	font-size: 2.5em;
 	color: #fff;
 	}
 
 h3 {
 	font-family: $font1;
-  font-size: $bigger-h3;
+    font-size: $bigger-h3;
 	font-weight: normal;
 	letter-spacing: 1px;
 	padding-top: 10px;
@@ -156,23 +156,28 @@ h3 {
 	}
 
 .preamble>h3{
-	color: $blue-color;
+	color: #600319;
+	font-weight: bold;
 	}
 
 .explanation>h3{
-	color: $blue-color;
+	color: #73041e;
+	font-weight: bold;
 	}
 
 .participation>h3{
-	color: $blue-color;
+	color: #8a0424;
+	font-weight: bold;	
 	}
 
 .benefits>h3{
-	color: $blue-color;
+	color: #990528;
+	font-weight: bold;	
 	}
 
 .requirements>h3{
-	color: $blue-color;
+	color: #ad052d;
+	font-weight: bold;	
 	}
 
 header {
@@ -235,7 +240,7 @@ abbr {
 ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	."
 ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		."
 ". .    .       .     .     .       . 	."
-
+". footer 		footer   		footer    	footer    	footer   		footer 			."
 	}
 
 .intro {
@@ -251,6 +256,7 @@ abbr {
 	}
 .summary p {
 	font: $paragraph-size $font1;
+	font-weight: semi-bold;
 
 	}
 
@@ -284,8 +290,8 @@ abbr {
 footer {
   margin-bottom: -75vh;
   margin-top: 75vh;
-  margin-left: -21px;
-  margin-right: -22px;
+  margin-left: -61px;
+  margin-right: -61px;
   background-color: whitesmoke;
   color:gray;
   all: revert;
@@ -310,7 +316,8 @@ footer a:link, footer a:visited {
 	}
 
 .sidebar h3{
-  color: #0d5ba6;
+  color: #fff39b;
+  font-weight: bold;
   background-color: whitesmoke;
 	}
 .sidebar h3.select {
@@ -329,7 +336,7 @@ footer a:link, footer a:visited {
 
 .sidebar ul {
 	list-style-type: none;
-  text-align: center;
+	text-align: center;
 	}
 
 .sidebar li {
@@ -406,22 +413,22 @@ footer a:link, footer a:visited {
   }
   }
 
-  @media only screen and (min-width: 721px)and (max-width: 1440px){
+@media only screen and (min-width: 721px)and (max-width: 1440px){
     footer {
       margin-bottom: -70vh;
       margin-top: 75vh;
-      background-color: whitesmoke;
+      background-color: blue;
       color: gray;
       text-decoration: none;
 
     }
   }
 
-  @media only screen and (min-width: 1441px){
+@media only screen and (min-width: 1441px){
     footer {
       margin-bottom: -75vh;
       margin-top: 75vh;
-      background-color: whitesmoke;
+      background-color: blue;
       color: gray;
       text-decoration: none;
 
