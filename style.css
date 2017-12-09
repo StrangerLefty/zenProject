@@ -200,7 +200,7 @@ abbr {
   grid-template-columns: fit 60%;
   grid-template-rows: fit(40%);
   grid-gap: 60px;
-  grid-template-areas: ". intro 			intro 			intro 			intro 			intro 			intro 			." ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	." ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		." ". .    .       .     .     .       . 	." ". footer 		footer   		footer    	footer    	footer   		footer 			."; 
+  grid-template-areas: ". intro 			intro 			intro 			intro 			intro 			intro 			." ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	." ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		." ". .    .       .     .     .       . 	."; 
   }
   
 
@@ -276,15 +276,137 @@ footer a:link, footer a:visited {
 
 /* phone screen*/
 @media only screen and (max-width: 535px) {
+
+.extra1 {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.extra2 {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.extra3 {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.extra4 {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.extra5 {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.extra6 {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
   .page-wrapper {
-    max-width: 80vw; }
+  font-size: .30em;
+  grid-gap:0px;
+     }
 
   footer {
-    margin-bottom: -75vh;
-    margin-top: 75vh;
-    color: gray;
-    background-color: whitesmoke;
-    text-decoration: none; } }
+    margin-bottom: -25vw;
+    margin-top: 1fr;
+    margin-left: .05vw;
+  margin-right: .05vw;} }
 /*tablet screen*/
 @media only screen and (min-width: 536px) and (max-width: 719px) {
   .page-wrapper {
