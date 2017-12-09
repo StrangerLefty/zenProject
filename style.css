@@ -7,7 +7,7 @@
   /* Legacy iOS */ }
 @keyframes movebubble {
   from {
-    top: 2000px; }
+    top: 2500px; }
   to {
     top: -5px; } }
 @-webkit-keyframes sideWays {
@@ -26,15 +26,23 @@
   -moz-transform: translate3d(-5%, -5%, 0) scale(1.6) rotate(0.001deg);
   transform: translate3d(-5%, -5%, 0) scale(1.6) rotate(0.001deg); }
 
+  .extra3:before{
+  image: url(trollface.jpg);
+  margin-top: 30px;
+  content:"Clyde loves you";
+  font-size: 15px;
+  justify-content: center;
+}
 .extra3 {
-  -webkit-animation: movebubbles 15s linear infinite, sideWays 20s ease-in-out infinite alternate;
-  -moz-animation: movebubbles 15s linear infinite, sideWays 20s ease-in-out infinite alternate;
-  animation: movebubbles 15s linear infinite, sideWays 20s ease-in-out infinite alternate;
-  left: 70%;
-  top: 96%;
-  -webkit-transform: translate3d(-5%, -5%, 0) scale(2.3) rotate(0.001deg);
-  -moz-transform: translate3d(-5%, -5%, 0) scale(2.3) rotate(0.001deg);
-  transform: translate3d(-5%, -5%, 0) scale(2.3) rotate(0.001deg); }
+  -webkit-animation: movebubble 15s linear infinite, sideWays 5s ease-in-out infinite alternate;
+  -moz-animation: movebubble 15s linear infinite, sideWays 5s ease-in-out infinite alternate;
+  animation: movebubble 15s linear infinite, sideWays 5s ease-in-out infinite alternate;
+  left: 5%;
+  top: 90%;
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  transform: scale(1.0); }
+
 
 .extra4 {
   -webkit-animation: movebubble 6s linear infinite, sideWays 10s ease-in-out infinite alternate;
