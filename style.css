@@ -94,7 +94,9 @@ body {
   background: -ms-linear-gradient(top, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
   background: linear-gradient(to bottom, rgba(10, 10, 10, 0.44) 0%, rgba(58, 58, 59, 0.65) 31%, rgba(145, 145, 145, 0.84) 64%, rgba(148, 148, 148, 0.85) 65%, #f9fbfc 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#f9fbfc', GradientType=0 );
-  background-image: url("colorful_fish_underwater.jpg"); }
+  background-image: url("colorful_fish_underwater.jpg"); 
+  overflow-x: hidden;
+  }
 
 body, .page-wrapper {
   background-image: url("colorful_fish_underwater.jpg");
@@ -185,6 +187,7 @@ abbr {
   background: linear-gradient(to bottom, rgba(133, 247, 255, 0.5) 0%, rgba(168, 220, 255, 0.5) 0%, rgba(71, 212, 255, 0.5) 26%, rgba(87, 134, 255, 0.5) 63%, rgba(92, 100, 255, 0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85f7ff', endColorstr='#5c64ff', GradientType=0 );
   z-index: 6;
+ 
   margin: -10px auto auto auto;
   display: grid;
   /*height: 10px;*/
@@ -193,7 +196,9 @@ abbr {
   grid-template-columns: fit 60%;
   grid-template-rows: fit(40%);
   grid-gap: 60px;
-  grid-template-areas: ". intro 			intro 			intro 			intro 			intro 			intro 			." ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	." ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		." ". .    .       .     .     .       . 	." ". footer 		footer   		footer    	footer    	footer   		footer 			."; }
+  grid-template-areas: ". intro 			intro 			intro 			intro 			intro 			intro 			." ". supporting supporting 	supporting 	supporting 	supporting 	supporting 	." ". sidebar 		sidebar    	sidebar    	sidebar    	sidebar    	sidebar 		." ". .    .       .     .     .       . 	." ". footer 		footer   		footer    	footer    	footer   		footer 			."; 
+  }
+  
 
 .intro {
   grid-area: intro; }
@@ -271,7 +276,7 @@ footer a:link, footer a:visited {
     max-width: 80vw; }
 
   footer {
-    margin-bottom: -175vh;
+    margin-bottom: -75vh;
     margin-top: 75vh;
     color: gray;
     background-color: whitesmoke;
@@ -281,6 +286,11 @@ footer a:link, footer a:visited {
   .page-wrapper {
     max-width: 65vw; }
 
+	footer {
+    margin-bottom: -75vh;
+    margin-top: 75vh;
+     } 
+	
   .extra1 {
     max-width: 17.5vw;
     float: left; }
@@ -302,8 +312,8 @@ footer a:link, footer a:visited {
     float: right; } }
 @media only screen and (min-width: 721px) and (max-width: 1440px) {
   footer {
-    margin-bottom: -70vh;
-    margin-top: 75vh;
+    margin-bottom: -50vh;
+    margin-top: 55vh;
     background-color: blue;
     color: gray;
     text-decoration: none; } }
